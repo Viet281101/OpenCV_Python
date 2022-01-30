@@ -27,7 +27,7 @@ while True:
 	fps = 1/(cTime - pTime)  #calcule fps frames per second
 	pTime = cTime
 	# print(type(fps))
-	
+
 	# show fps in window by text
 	cv2.putText(frame, f"FPS: {int(fps)}", (150, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
