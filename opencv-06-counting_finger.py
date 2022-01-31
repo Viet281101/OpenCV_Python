@@ -12,10 +12,12 @@ lst_2 = []
 
 for i in lst:
 	image = cv2.imread(f"{FolderPath}/{i}")
-	# print(f"{FolderPath}/{i}")
+	print(f"{FolderPath}/{i}")
 	lst_2.append(image)
 
 # print(lst_2[0].shape)
+
+
 
 detector = htm.handDetector(detectionCon = 1)
 
@@ -49,12 +51,12 @@ while True:
 		
 		# print(fingers)
 		number_finger = fingers.count(1)
-		print(number_finger)
+		# print(number_finger)
 		# print(type(number_finger))
 
 
-	h, w, c = lst_2[0].shape
-	frame[0:h, 0:w] = lst_2[0]
+	h, w, c = lst_2[number_finger - 1].shape
+	frame[0:h, 0:w] = lst_2[number_finger - 1]
 
 	# draw a rectangle to affiche the number of finger
 	cv2.rectangle(frame, (0, 125), (107, 240), (0, 255, 0), -1)
