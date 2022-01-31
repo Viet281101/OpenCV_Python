@@ -1,6 +1,7 @@
 from cv2 import cv2
 import time
 import os
+import hand as htm
 
 pTime = 0
 cap = cv2.VideoCapture(0)
@@ -14,10 +15,15 @@ for i in lst:
 	print(f"{FolderPath}/{i}")
 	lst_2.append(image)
 
-print(lst_2[0].shape)
+# print(lst_2[0].shape)
+
+detector = htm.handDetector(detectionCon = 1)
 
 while True:
 	ret, frame = cap.read()
+	frame = detector.findHands(frame)
+	lmList = detector.findPosition(frame, draw = False)
+
 	h, w, c = lst_2[0].shape
 	frame[0:h, 0:w] = lst_2[0]
 
