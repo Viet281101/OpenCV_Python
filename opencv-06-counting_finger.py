@@ -19,6 +19,9 @@ for i in lst:
 
 detector = htm.handDetector(detectionCon = 1)
 
+# Id of top point of 5 finger in your hand
+fingerid = [4, 8, 12, 16, 20]
+
 while True:
 	ret, frame = cap.read()
 	frame = detector.findHands(frame)
@@ -28,14 +31,34 @@ while True:
 
 
 	if len(lmList) != 0:
-		# for the most long finger
+		fingers = []
 
-		if lmList[8][2] < lmList[6][2]:
-			print("The first finger is open")
+		# for the thumb finger
+		if lmList[fingerid[0]][1] < lmList[fingerid[0] - 2][1]:
+			fingers.append(1)
+		else:
+			fingers.append(0)
+
+		# for the 4 long finger
+		for id in range(1, 5):
+
+			if lmList[fingerid[id]][2] < lmList[fingerid[id] - 2][2]:
+				fingers.append(1)
+			else:
+				fingers.append(0)
+		
+		# print(fingers)
+		number_finger = fingers.count(1)
+		# print(number_finger)
+		# print(type(number_finger))
 
 
 	h, w, c = lst_2[0].shape
 	frame[0:h, 0:w] = lst_2[0]
+
+	# draw a rectangle to affiche the number of finger
+	cv2.rectangle(frame, (0, 125), (107, 240), (0, 255, 0), -1)
+	cv2.putText(frame, str(number_finger, (20, 225), cv2.FONT_HERSHEY_PLAIN, 6, (255, 0, 0), 5)
 
 
 # Show FPS
