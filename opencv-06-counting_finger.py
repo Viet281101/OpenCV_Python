@@ -12,7 +12,7 @@ lst_2 = []
 
 for i in lst:
 	image = cv2.imread(f"{FolderPath}/{i}")
-	print(f"{FolderPath}/{i}")
+	# print(f"{FolderPath}/{i}")
 	lst_2.append(image)
 
 # print(lst_2[0].shape)
@@ -22,15 +22,27 @@ detector = htm.handDetector(detectionCon = 1)
 while True:
 	ret, frame = cap.read()
 	frame = detector.findHands(frame)
+	# find the position of 20 point in your hand
 	lmList = detector.findPosition(frame, draw = False)
+	# print(lmList)
+
+
+	if len(lmList) != 0:
+		# for the most long finger
+
+		if lmList[8][2] < lmList[6][2]:
+			print("The first finger is open")
+
 
 	h, w, c = lst_2[0].shape
 	frame[0:h, 0:w] = lst_2[0]
 
 
-	# Show FPS
-	cTime = time.time() 	#Return the number of second 
-	fps = 1/(cTime - pTime)  #calcule fps frames per second
+# Show FPS
+	#Return the number of second 
+	cTime = time.time()
+	#calcule fps frames per second
+	fps = 1/(cTime - pTime)
 	pTime = cTime
 	# print(type(fps))
 
