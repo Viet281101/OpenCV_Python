@@ -49,7 +49,7 @@ while True:
 		
 		# print(fingers)
 		number_finger = fingers.count(1)
-		# print(number_finger)
+		print(number_finger)
 		# print(type(number_finger))
 
 
@@ -58,7 +58,7 @@ while True:
 
 	# draw a rectangle to affiche the number of finger
 	cv2.rectangle(frame, (0, 125), (107, 240), (0, 255, 0), -1)
-	cv2.putText(frame, str(number_finger, (20, 225), cv2.FONT_HERSHEY_PLAIN, 6, (255, 0, 0), 5)
+	cv2.putText(frame, str(number_finger), (20, 225), cv2.FONT_HERSHEY_PLAIN, 6, (255, 0, 0), 5)
 
 
 # Show FPS
@@ -70,7 +70,7 @@ while True:
 	# print(type(fps))
 
 	# show fps in window by text
-	cv2.putText(frame, f"FPS: {int(fps)}", (150, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+	cv2.putText(frame, f"FPS: {int(fps)}", (150, 70), cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 0), 3)
 
 
 
