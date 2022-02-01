@@ -1,5 +1,6 @@
 from cv2 import cv2
 import time
+import math
 import hand as htm
 
 pTime = 0
@@ -25,12 +26,25 @@ while True:
 		cv2.circle(frame, (x1, y1), 10, (255, 0, 255), -1)
 		cv2.circle(frame, (x2, y2), 10, (255, 0, 255), -1)
 
+
 		# connect two circle with a line 
 		cv2.line(frame, (x1, y1), (x2, y2), (255, 0, 255), 3)
+
 
 		# draw a circle at the center of line
 		cx, cy = (x1 + x2)//2, (y1 + y2)//2
 		cv2.circle(frame, (cx, cy), 10, (255, 0, 255), -1)
+
+
+		# calculate the length of line
+		length = math.hypot(x2 - x1, y2 - y1)
+
+		# print(length)
+		# my length of finger line is 25 -> 230
+
+		# draw the min volumn circle
+		if length < 25:
+			cv2.circle(frame, (cx, cy), 15, (0, 255, 0), -1)
 
 
 # Show FPS
