@@ -17,7 +17,7 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 
 
 
-- For the file "opencv-07change_volumn_finger.py", you may need to install the 'pycaw' package:
+- For the file "opencv-07change_volumn_finger.py", you may need to install the 'pycaw' package to see the result:
 
 ~$ pip install pycaw
 
