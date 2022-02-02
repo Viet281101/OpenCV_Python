@@ -21,9 +21,12 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 
 ~$ pip install pycaw
 
+Here is the link to see more: https://github.com/AndreMiras/pycaw
 
 
-I chose the path that I love to pursue in python, it makes me feel excited and enjoy while learning.
+
+
+P/s: I chose the path that I love to pursue in python, it makes me feel excited and enjoy while learning.
 And I hope the same for you, so have a nice day.
 
 

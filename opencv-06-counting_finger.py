@@ -26,7 +26,6 @@ for i in range(1,7):
 # print(lst_2[0].shape)
 
 
-
 detector = htm.handDetector(detectionCon = 1)
 
 # Id of top point of 5 finger in your hand
