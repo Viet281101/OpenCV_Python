@@ -1,6 +1,7 @@
 from cv2 import cv2
 import time
 import math
+import numpy as np
 import hand as htm
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
@@ -19,8 +20,13 @@ interface = devices.Activate(
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 # volume.GetMute()
 # volume.GetMasterVolumeLevel()
-volume.GetVolumeRange()
-# volume.SetMasterVolumeLevel(-20.0, None)
+volRange = volume.GetVolumeRange()
+
+# print(volRange)
+# print(type(volRange))
+
+minVol = volRange[0]
+maxVol = volRange[1]
 
 while True:
 	ret, frame = cap.read()
@@ -55,9 +61,27 @@ while True:
 		# print(length)
 		# my length of finger line is 25 -> 230
 
+
+		# connect the length of the line with volumn:
+		vol = np.interp(length, [25, 230], [minVol, maxVol])
+		volBar = np.interp(length, [25, 230], [350, 100])
+		vol_percentage = np.interp(length, [25, 230], [0, 100])
+		# print(length, vol)
+		# print(volBar)
+
+		# audio strip on the machine be change
+		volume.SetMasterVolumeLevel(vol, None)
 		# draw the min volumn circle
 		if length < 25:
 			cv2.circle(frame, (cx, cy), 15, (0, 255, 0), -1)
+
+
+		# draw a rectangle showing the value of the volume percentage on the screen
+		cv2.rectangle(frame, (20, 100), (60, 350), (0, 255, 0), 3)
+		cv2.rectangle(frame, (20, int(volBar)), (60, 350), (0, 255, 0), -1)
+
+		# showing the value of the volume percentage:
+		cv2.putText(frame, f"{int(vol_percentage)} %", (20, 450), cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 0), 3)
 
 
 # Show FPS
