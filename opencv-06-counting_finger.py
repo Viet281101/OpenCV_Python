@@ -10,9 +10,17 @@ FolderPath = "Fingers"
 lst = os.listdir(FolderPath)
 lst_2 = []
 
-for i in lst:
-	image = cv2.imread(f"{FolderPath}/{i}")
-	print(f"{FolderPath}/{i}")
+# show order of photos in Fingers
+
+# for i in lst:
+# 	image = cv2.imread(f"{FolderPath}/{i}")
+# 	print(f"{FolderPath}/{i}")
+# 	lst_2.append(image)
+
+# Displays the order of the photos by file name
+for i in range(1,7):
+	image=cv2.imread(f"{FolderPath}/{i}"+".png")
+	print(f"{FolderPath}/{i}"+".png")
 	lst_2.append(image)
 
 # print(lst_2[0].shape)
