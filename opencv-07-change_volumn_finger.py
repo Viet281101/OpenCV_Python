@@ -3,9 +3,13 @@ import time
 import math
 import numpy as np
 import hand as htm
-from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+######################################################################
+
+# from ctypes import cast, POINTER
+# from comtypes import CLSCTX_ALL
+# from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+
+######################################################################
 
 pTime = 0
 
@@ -13,20 +17,23 @@ cap = cv2.VideoCapture(0)
 
 detector = htm.handDetector(detectionCon = 1)
 
+######################################################################
 
-devices = AudioUtilities.GetSpeakers()
-interface = devices.Activate(
-    IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-volume = cast(interface, POINTER(IAudioEndpointVolume))
-# volume.GetMute()
-# volume.GetMasterVolumeLevel()
-volRange = volume.GetVolumeRange()
+# devices = AudioUtilities.GetSpeakers()
+# interface = devices.Activate(
+#     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+# volume = cast(interface, POINTER(IAudioEndpointVolume))
+# # volume.GetMute()
+# # volume.GetMasterVolumeLevel()
+# volRange = volume.GetVolumeRange()
+
+# minVol = volRange[0]
+# maxVol = volRange[1]
+
+#####################################################################
 
 # print(volRange)
 # print(type(volRange))
-
-minVol = volRange[0]
-maxVol = volRange[1]
 
 while True:
 	ret, frame = cap.read()
@@ -63,14 +70,22 @@ while True:
 
 
 		# connect the length of the line with volumn:
-		vol = np.interp(length, [25, 230], [minVol, maxVol])
+		######################################################################
+		# vol = np.interp(length, [25, 230], [minVol, maxVol])
+		######################################################################
 		volBar = np.interp(length, [25, 230], [350, 100])
 		vol_percentage = np.interp(length, [25, 230], [0, 100])
 		# print(length, vol)
 		# print(volBar)
 
+
 		# audio strip on the machine be change
-		volume.SetMasterVolumeLevel(vol, None)
+
+		######################################################################
+		# volume.SetMasterVolumeLevel(vol, None)
+		######################################################################
+
+
 		# draw the min volumn circle
 		if length < 25:
 			cv2.circle(frame, (cx, cy), 15, (0, 255, 0), -1)

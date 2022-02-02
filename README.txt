@@ -22,6 +22,10 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 ~$ pip install pycaw
 
 Here is the link to see more: https://github.com/AndreMiras/pycaw
+Oh, i forgot to tell you that you can only see the true result if run this programm in Windows because COMError import problem.
+
+IMPORTANT:
+The lines in the comment line are the function to adjust the sound from 'pycaw' if you run it in Windows remove the comments from those lines and start it up.
 
 
 
