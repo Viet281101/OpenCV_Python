@@ -30,6 +30,18 @@ The lines in the comment line are the function to adjust the sound from 'pycaw' 
 
 
 
+
+- For the file "opencv-08.py", download this:
+
+~$ pip3 install face_recognition
+
+Here is the link to see more: https://github.com/ageitgey/face_recognition
+
+
+
+
+
+
 P/s: I chose the path that I love to pursue in python, it makes me feel excited and enjoy while learning.
 And I hope the same for you, so have a nice day.
 
