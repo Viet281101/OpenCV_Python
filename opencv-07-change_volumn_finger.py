@@ -96,7 +96,7 @@ while True:
 		cv2.rectangle(frame, (20, int(volBar)), (60, 350), (0, 255, 0), -1)
 
 		# showing the value of the volume percentage:
-		cv2.putText(frame, f"{int(vol_percentage)} %", (20, 450), cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 0), 3)
+		cv2.putText(frame, f"{int(vol_percentage)} %", (20, 80), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), 3)
 
 
 # Show FPS
