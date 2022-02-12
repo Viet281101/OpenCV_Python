@@ -41,6 +41,16 @@ Here is the link to see more: https://github.com/ageitgey/face_recognition
 
 
 
+- For the file "opencv-12-body_detection.py", here is the link of holistic solution:
+https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holistic.py
+
+(make sure to install this one if you haven't yet)
+~$ pip3 install mediapipe
+
+
+
+
+
 
 P/s: I chose the path that I love to pursue in python, it makes me feel excited and enjoy while learning.
 And I hope the same for you, so have a nice day.
