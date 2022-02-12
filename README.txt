@@ -51,6 +51,18 @@ https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holis
 
 
 
+- For the file "opencv-14-virtual_mouse.py":
+
+~$ pip3 installpywin32
+
+~$ pip3 installpywin32 --upgrade
+
+Link to see more information:
+https://github.com/mhammond/pywin32/releases
+
+
+
+
 
 P/s: I chose the path that I love to pursue in python, it makes me feel excited and enjoy while learning.
 And I hope the same for you, so have a nice day.
