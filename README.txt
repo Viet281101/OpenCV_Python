@@ -2,9 +2,9 @@
 
 You need to install the opencv python to see this project, so simple with this command:
 
-~$ pip install opencv-python
+~$ pip3 install opencv-python
 
-~$ pip install numpy
+~$ pip3 install numpy
 
 
 
@@ -13,13 +13,13 @@ https://google.github.io/mediapipe/solutions/hands.html
 
 This part you need to install 'mediapipe' to see the result, simplement with this command:
 
-~$ pip install mediapipe
+~$ pip3 install mediapipe
 
 
 
 - For the file "opencv-07change_volumn_finger.py", you may need to install the 'pycaw' package to see the result:
 
-~$ pip install pycaw
+~$ pip3 install pycaw
 
 Here is the link to see more: https://github.com/AndreMiras/pycaw
 Oh, i forgot to tell you that you can only see the true result if run this programm in Windows because 'COMError import' problem.
