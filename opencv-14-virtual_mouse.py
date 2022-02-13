@@ -83,3 +83,7 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.8) a
             break
 
 video.release()
+
+
+
+
