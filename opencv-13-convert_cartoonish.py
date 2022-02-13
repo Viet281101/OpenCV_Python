@@ -22,6 +22,10 @@ cartoon = cv2.bitwise_and(color, color, mask = edges)
 
 cv2.imshow("show", cartoon)
 
+#save the cartoon picture to folder if click 's' 
+if cv2.waitKey() == ord("s"):
+	cv2.imwrite("your_cartoon_picture.jpg", cartoon)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
