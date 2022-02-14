@@ -4,8 +4,10 @@ import numpy as np
 
 img = cv2.imread("selfie_picture.jpg")
 
+size_img = 0.5
+
 # Because my picture is too big so I resize it:
-img = cv2.resize(img, (0, 0), fx = 0.5, fy = 0.5)
+img = cv2.resize(img, (0, 0), fx = size_img, fy = size_img)
 
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
