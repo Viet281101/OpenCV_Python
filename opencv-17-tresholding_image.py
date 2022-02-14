@@ -84,6 +84,7 @@ def Otsu_Binarization():
 
 	plt.show()
 
+	
 
 
 def main():
