@@ -16,12 +16,13 @@ gray = cv2.medianBlur(gray, 5)
 
 edges = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 13, 5)
 
+# smoothing image
 color = cv2.bilateralFilter(img, 9, 250, 250)
 
 cartoon = cv2.bitwise_and(color, color, mask = edges)
 
 
-
+# Show
 cv2.imshow("show", cartoon)
 
 #save the cartoon picture to folder if click 's' 
