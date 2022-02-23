@@ -1,4 +1,7 @@
-- This project is done bit by bit in order of steps on OpenCV Python Doc: https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html -
+# Learning OpenCV in Python
+
+
+### This project is done bit by bit in order of steps on OpenCV Python Doc: https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
 
 
 - The link of the images:
@@ -15,7 +18,7 @@ You need to install the opencv python to see this project, so simple with this c
 ```
 
 
-- For the File _"opencv-06-counting_finger.py"_, i've seen the details to make in this link:
+- For the File _"opencv-06-counting_finger.py"_, i've seen the details to make in here:
 https://google.github.io/mediapipe/solutions/hands.html
 
 This part you need to install 'mediapipe' to see the result, simplement with this command:
@@ -29,7 +32,7 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 ~$ pip3 install pycaw
 ```
 
-Here is the link to see more: https://github.com/AndreMiras/pycaw 
+To see more: https://github.com/AndreMiras/pycaw 
 Oh, i forgot to tell you that you can only see the true result if run this programm in Windows because 'COMError import' problem.
 
 **IMPORTANT:**
@@ -44,7 +47,7 @@ The lines in the comment line of this part are the function to adjust the sound 
 ~$ pip3 install face_recognition
 ```
 
-Here is the link to see more: https://github.com/ageitgey/face_recognition
+Click here to see more: https://github.com/ageitgey/face_recognition
 
 
 
@@ -68,11 +71,11 @@ https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holis
 ~$ pip3 installpywin32 --upgrade
 ```
 
-Link to see more information:
+To see more information:
 https://github.com/mhammond/pywin32/releases
 
 
-**
+
 
 
 P/s: I chose the path that I love to pursue in python, it makes me feel excited and enjoy while learning.
