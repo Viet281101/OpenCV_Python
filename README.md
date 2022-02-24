@@ -2,16 +2,15 @@
 
 
 #### This project is done bit by bit in order of steps on OpenCV Python Doc: 
-
 https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
 
 
-- The link of the images:
+- The link of the images: 
 https://norma-2d.itch.io/space-backgrounds-pack
 
 
 
-You need to install the opencv python to see this project, so simple with this command:
+You may need to install the _*opencv-python*_ to see this project, so simple with this command:
 ```
 ~$ pip3 install opencv-python
 ```
@@ -20,7 +19,10 @@ You need to install the opencv python to see this project, so simple with this c
 ```
 
 
-- For the File _"opencv-06-counting_finger.py"_, i've seen the details to make in here:
+
+
+
+- For the File **_"opencv-06-counting_finger.py"_**, I've seen the details to make in here:
 https://google.github.io/mediapipe/solutions/hands.html
 
 This part you need to install 'mediapipe' to see the result, simplement with this command:
@@ -29,7 +31,9 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 ```
 
 
-- For the file _"opencv-07change_volumn_finger.py"_, you may need to install the 'pycaw' package to see the result:
+
+
+- For the file **_"opencv-07change_volumn_finger.py"_**, you may need to install the 'pycaw' package to see the result:
 ```
 ~$ pip3 install pycaw
 ```
@@ -44,7 +48,8 @@ The lines in the comment line of this part are the function to adjust the sound 
 
 
 
-- For the file _"opencv-08-face_detection.py"_, download this:
+
+- For the file **_"opencv-08-face_detection.py"_**, download this:
 ```
 ~$ pip3 install face_recognition
 ```
@@ -55,7 +60,7 @@ Click here to see more: https://github.com/ageitgey/face_recognition
 
 
 
-- For the file _"opencv-12-body_detection.py"_, here is the link of holistic solution:
+- For the file **_"opencv-12-body_detection.py"_**, here is the link of holistic solution:
 https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holistic.py
 
 (make sure to install this one if you haven't yet)
@@ -66,15 +71,16 @@ https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holis
 
 
 
-- For the file _"opencv-14-virtual_mouse.py"_:
+- For the file **_"opencv-14-virtual_mouse.py"_**:
 ```
 ~$ pip3 installpywin32
 
 ~$ pip3 installpywin32 --upgrade
 ```
 
-To see more information:
+To see more informations:
 https://github.com/mhammond/pywin32/releases
+
 
 
 

@@ -14,6 +14,9 @@ cap = cv2.VideoCapture(0)
 detector = FaceMeshDetector(maxFaces = 1)
 
 
+idlist = [22, 23, 24]
+
+
 while True:
 
 	if cap.get(cv2.CAP_PROP_POS_FRAMES) == cap.get(cv2.CAP_PROP_FRAME_COUNT):
@@ -21,7 +24,13 @@ while True:
 
 	success, img = cap.read()
 
-	img, faces = detector.findFaceMesh(img)
+	img, faces = detector.findFaceMesh(img, draw = False)
+
+
+	if faces:
+		face = faces[0]
+		for id in idlist:
+			cv2.circle(img, face[id], 5, (255, 0, 255), cv2.FILLED)
 
 
 	# change the screen size
