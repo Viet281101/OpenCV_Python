@@ -14,9 +14,16 @@ cap = cv2.VideoCapture(0)
 
 detector = FaceMeshDetector(maxFaces = 1)
 
-plotY = LivePlot(640, 480, [20, 50])
+plotY = LivePlot(640, 480, [0, 50], invert = True)
 
 idlist = [22, 23, 24, 26, 110, 157, 158, 159, 160, 161, 130, 243]
+
+ratioList = []
+
+blinkCounter = 0
+counter = 0
+
+color = (255, 0, 255)
 
 
 while True:
@@ -32,7 +39,7 @@ while True:
 	if faces:
 		face = faces[0]
 		for id in idlist:
-			cv2.circle(img, face[id], 5, (255, 0, 255), cv2.FILLED)
+			cv2.circle(img, face[id], 5, color, cv2.FILLED)
 
 		left_Up = face[159]
 		left_Down = face[23]
@@ -47,8 +54,27 @@ while True:
 		
 		ratio = int((length_Ver / length_Hor) * 10)
 
+		ratioList.append(ratio)
 
-		imgPlot = plotY.update(ratio)
+		if len(ratioList) > 3:
+			ratioList.pop(0)
+
+		ratioAvg = sum(ratioList) / len(ratioList)
+
+
+		if ratioAvg > 30 and counter == 0:
+			blinkCounter += 1
+			color = (0, 200, 0)
+			counter += 1
+		if counter != 0:
+			counter += 1
+			if counter > 10:
+				counter = 0
+				color = (255, 0, 255)
+
+		cvzone.putTextRect(img, f'Blink Count: {blinkCounter}', (10, 40), colorR = color)
+
+		imgPlot = plotY.update(ratioAvg, color)
 
 		# change the screen size
 		img = cv2.resize(img, (640, 480))
