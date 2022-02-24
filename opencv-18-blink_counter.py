@@ -2,6 +2,7 @@
 import cv2
 import cvzone
 from cvzone.FaceMeshModule import FaceMeshDetector
+from cvzone.PlotModule import LivePlot
 
 
 ### Use the webcam
@@ -13,8 +14,9 @@ cap = cv2.VideoCapture(0)
 
 detector = FaceMeshDetector(maxFaces = 1)
 
+plotY = LivePlot(640, 480, [20, 50])
 
-idlist = [22, 23, 24]
+idlist = [22, 23, 24, 26, 110, 157, 158, 159, 160, 161, 130, 243]
 
 
 while True:
@@ -32,16 +34,43 @@ while True:
 		for id in idlist:
 			cv2.circle(img, face[id], 5, (255, 0, 255), cv2.FILLED)
 
+		left_Up = face[159]
+		left_Down = face[23]
+		left_Left = face[130]
+		left_Right = face[243]
 
-	# change the screen size
-	img = cv2.resize(img, (640, 480))
+		length_Ver, _ = detector.findDistance(left_Left, left_Right) 
+		length_Hor, _ = detector.findDistance(left_Up, left_Down)
+		
+		cv2.line(img, left_Up, left_Down, (0, 200, 0), 3)
+		cv2.line(img, left_Left, left_Right, (0, 200, 0), 3)
+		
+		ratio = int((length_Ver / length_Hor) * 10)
 
 
-	# Show
-	cv2.imshow("Window", img)
+		imgPlot = plotY.update(ratio)
 
-	# wait in 1/1000s, exit if click q
-	if cv2.waitKey(1) == ord("q"):
+		# change the screen size
+		img = cv2.resize(img, (640, 480))
+		
+
+		# show plot window
+		# cv2.imshow("Window Plot", imgPlot)
+
+		
+		imgStack = cvzone.stackImages([img, imgPlot], 2, 1)
+
+	else:
+		img = cv2.resize(img, (640, 480))
+		imgStack = cvzone.stackImages([img, img], 2, 1)
+
+
+
+	# Show main window
+	cv2.imshow("Window", imgStack)
+
+	
+	if cv2.waitKey(25) == ord("q"):
 		break
 
 
