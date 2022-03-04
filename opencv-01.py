@@ -1,7 +1,7 @@
 from cv2 import cv2
 
 # read image
-img = cv2.imread("1-Blue_320x180.png", 1)
+img = cv2.imread("images/1-Blue_320x180.png", 1)
 
 
 # resize image

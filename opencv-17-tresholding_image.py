@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 
 def simple_thresholding():
-	img = cv.imread('selfie_picture.jpg',0)
+	img = cv.imread('images/selfie_picture.jpg',0)
 
 	ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
 	ret,thresh2 = cv.threshold(img,127,255,cv.THRESH_BINARY_INV)
@@ -26,7 +26,7 @@ def simple_thresholding():
 
 
 def adaptive_thresholding():
-	img = cv.imread('selfie_picture.jpg',0)
+	img = cv.imread('images/selfie_picture.jpg',0)
 	img = cv.medianBlur(img,5)
 
 	ret,th1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
@@ -52,7 +52,7 @@ def adaptive_thresholding():
 
 
 def Otsu_Binarization():
-	img = cv.imread('selfie_picture.jpg',0)
+	img = cv.imread('images/selfie_picture.jpg',0)
 	# global thresholding
 	ret1,th1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
 

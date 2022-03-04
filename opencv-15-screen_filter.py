@@ -12,16 +12,16 @@ segmen=SelfiSegmentation()
 def imagechange(image):
     global loopsvar
     if image=="firstimage":
-        bgimage=cv2.imread('1-Blue_320x180.png')
+        bgimage=cv2.imread('images/1-Blue_320x180.png')
  
     elif image=="secondimage":
-        bgimage=cv2.imread('1-Red_320x180.png')
+        bgimage=cv2.imread('images/1-Red_320x180.png')
  
     elif image=="thirdimage":
-        bgimage=cv2.imread('1-Purple_320x180.png')
+        bgimage=cv2.imread('images/1-Purple_320x180.png')
 
     elif image=="fourthimage":
-        bgimage=cv2.imread('1-Green_320x180.png')
+        bgimage=cv2.imread('images/1-Green_320x180.png')
  
     while loopsvar:
         check,frame=video.read()

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-img = cv2.imread("selfie_picture.jpg")
+img = cv2.imread("images/selfie_picture.jpg")
 
 size_img = 0.5
 
@@ -27,7 +27,7 @@ cv2.imshow("show", cartoon)
 
 #save the cartoon picture to folder if click 's' 
 if cv2.waitKey() == ord("s"):
-	cv2.imwrite("your_cartoon_picture.jpg", cartoon)
+	cv2.imwrite("images/your_cartoon_picture.jpg", cartoon)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -1,12 +1,14 @@
-# Learning OpenCV in Python
+# Learning [OpenCV in Python](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
+
+[![alt text](images/opencv-logo-small.png)](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
+
+-----------------------------------------------------------------------------------------------
+
+#### This project is done bit by bit in order of steps on [OpenCV Python Doc](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
 
 
-#### This project is done bit by bit in order of steps on OpenCV Python Doc: 
-https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
+- The link of the [space images](https://norma-2d.itch.io/space-backgrounds-pack)
 
-
-- The link of the images: 
-https://norma-2d.itch.io/space-backgrounds-pack
 
 
 
@@ -38,7 +40,7 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 ~$ pip3 install pycaw
 ```
 
-To see more: https://github.com/AndreMiras/pycaw 
+To see more [_informations_](https://github.com/AndreMiras/pycaw)!
 Oh, i forgot to tell you that you can only see the true result if run this programm in Windows because 'COMError import' problem.
 
 **IMPORTANT:**
@@ -54,7 +56,7 @@ The lines in the comment line of this part are the function to adjust the sound 
 ~$ pip3 install face_recognition
 ```
 
-Click here to see more: https://github.com/ageitgey/face_recognition
+Click here to see more [_informations_](https://github.com/ageitgey/face_recognition)
 
 
 
@@ -78,8 +80,7 @@ https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holis
 ~$ pip3 installpywin32 --upgrade
 ```
 
-To see more informations:
-https://github.com/mhammond/pywin32/releases
+To see more [_informations_](https://github.com/mhammond/pywin32/releases)
 
 
 

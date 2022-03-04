@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 # load sample image
-image = cv2.imread("selfie_picture.jpg")
+image = cv2.imread("images/selfie_picture.jpg")
 
 
 # display loaded image
