@@ -26,7 +26,7 @@ You may need to install the _*opencv-python*_ to see this project, so simple wit
 
 - For the File **_"opencv-06-counting_finger.py"_**, I've seen the details to make in here:
 https://google.github.io/mediapipe/solutions/hands.html
-
+[![alt text](images/mediapipe_logo.svg)](https://google.github.io/mediapipe/solutions/hands.html)
 This part you need to install 'mediapipe' to see the result, simplement with this command:
 ```
 ~$ pip3 install mediapipe
