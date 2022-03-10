@@ -14,10 +14,10 @@
 
 You may need to install the _*opencv-python*_ to see this project, so simple with this command:
 ```
-~$ pip3 install opencv-python
+pip3 install opencv-python
 ```
 ```
-~$ pip3 install numpy
+pip3 install numpy
 ```
 
 
@@ -29,7 +29,7 @@ https://google.github.io/mediapipe/solutions/hands.html
 [![alt text](images/mediapipe_logo.svg)](https://google.github.io/mediapipe/solutions/hands.html)
 This part you need to install 'mediapipe' to see the result, simplement with this command:
 ```
-~$ pip3 install mediapipe
+pip3 install mediapipe
 ```
 
 
@@ -37,7 +37,7 @@ This part you need to install 'mediapipe' to see the result, simplement with thi
 
 - For the file **_"opencv-07change_volumn_finger.py"_**, you may need to install the 'pycaw' package to see the result:
 ```
-~$ pip3 install pycaw
+pip3 install pycaw
 ```
 
 To see more [_informations_](https://github.com/AndreMiras/pycaw)!
@@ -53,7 +53,7 @@ The lines in the comment line of this part are the function to adjust the sound 
 
 - For the file **_"opencv-08-face_detection.py"_**, download this:
 ```
-~$ pip3 install face_recognition
+pip3 install face_recognition
 ```
 
 Click here to see more [_informations_](https://github.com/ageitgey/face_recognition)
@@ -67,7 +67,7 @@ https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holis
 
 (make sure to install this one if you haven't yet)
 ```
-~$ pip3 install mediapipe
+pip3 install mediapipe
 ```
 
 
@@ -75,9 +75,9 @@ https://github.com/google/mediapipe/blob/master/mediapipe/python/solutions/holis
 
 - For the file **_"opencv-14-virtual_mouse.py"_**:
 ```
-~$ pip3 installpywin32
+pip3 installpywin32
 
-~$ pip3 installpywin32 --upgrade
+pip3 installpywin32 --upgrade
 ```
 
 To see more [_informations_](https://github.com/mhammond/pywin32/releases)
